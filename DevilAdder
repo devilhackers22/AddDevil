@@ -1,9 +1,7 @@
-clear
-sleep 1
-
 termux-open-url https://youtube.com/channel/UCtVKt69RRu9TOJFfk5neJEA
 sleep 1
 clear
+trap 'printf "\n";stop;exit 1' 2
 
 from telethon import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
